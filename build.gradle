@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+}
+
+group 'sbr.examples'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+
+
+dependencies {
+    implementation group: 'org.postgresql', name: 'postgresql', version: '42.2.24'
+
+    compile "com.sparkjava:spark-core:2.9.3"
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.0.1'
+
+    implementation group: 'com.zaxxer', name: 'HikariCP', version: '2.3.2'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+}
+
+test {
+    useJUnitPlatform()
+}
