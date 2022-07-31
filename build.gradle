@@ -12,15 +12,15 @@ repositories {
 
 
 dependencies {
-    implementation group: 'org.postgresql', name: 'postgresql', version: '42.2.24'
+    implementation group: 'org.postgresql', name: 'postgresql', version: '42.4.0'
 
-    compile "com.sparkjava:spark-core:2.9.3"
+    implementation "com.sparkjava:spark-core:2.9.3"
     implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.0.1'
 
     implementation group: 'com.zaxxer', name: 'HikariCP', version: '2.3.2'
 
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
 }
 
 test {

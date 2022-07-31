@@ -19,7 +19,7 @@
 Можно сделать это в Docker с помощью команды:
 
 ```sh
-docker run -e POSTGRES_PASSWORD=password -d postgres
+docker run -e POSTGRES_PASSWORD=password -d -p 5432:5432 postgres
 ```
 [Ссылка](https://hub.docker.com/_/postgres) на официальный образ PostgreSQL.
 
