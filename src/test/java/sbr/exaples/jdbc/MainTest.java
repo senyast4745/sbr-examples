@@ -131,7 +131,8 @@ class MainTest {
     @Test
     void extenderUpperCallable() throws SQLException {
         try (Connection conn = Main.getDefaultConnection()){
-            try (CallableStatement ctmt = conn.prepareCall("{? = upper(?)}")){
+            conn.setAutoCommit(false);
+            try (CallableStatement ctmt = conn.prepareCall("{ ? = call upper( ? ) }")){
                 ctmt.registerOutParameter(1, Types.VARCHAR);
                 ctmt.setString(2, "test");
                 ctmt.execute();
